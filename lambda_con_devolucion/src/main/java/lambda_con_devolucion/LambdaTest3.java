@@ -1,5 +1,8 @@
 package lambda_con_devolucion;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class LambdaTest3 {
     public static void main(String[] args) {
         engine((x, y) -> x + y);
@@ -12,6 +15,6 @@ public class LambdaTest3 {
     private static void engine(Calculadora calc) {
         int x = 2, y = 4;
         int resultado = calc.calcular(x, y);
-        System.out.println("El resultado de la operacion es: " + resultado);
+        log.info("El resultado de la operacion es: {}", resultado);
     }
 }

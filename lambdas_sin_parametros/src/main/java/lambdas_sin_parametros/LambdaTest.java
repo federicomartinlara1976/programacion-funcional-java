@@ -1,9 +1,12 @@
 package lambdas_sin_parametros;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class LambdaTest {
     public static void main(String[] args) {
         // Lambda sin parametros
-        FunctionTest functionTest = () -> System.out.println("Hola, mundo!");
+        FunctionTest functionTest = () -> log.info("Hola, mundo!");
         functionTest.saludar();
 
         LambdaTest lambdaTest = new LambdaTest();

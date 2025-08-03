@@ -1,3 +1,10 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class StreamTest {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
@@ -10,6 +17,6 @@ public class StreamTest {
             //.reduce(0, (n1, n2) -> n1 + n2);
             .reduce(0, Integer::sum); // 35
 
-        System.out.println("La suma de los cuadrados de los números impares es: " + suma);
+        log.info("La suma de los cuadrados de los números impares es: {}", suma);
     }
 }
