@@ -39,9 +39,6 @@ public class Principal {
         personas.forEach(p -> log.info("{}", p));
         log.info(HEADER);
 
-        //Collections.sort(personas, (persona1, persona2) -> persona1.getEdad().compareTo(persona2.getEdad()));
-        //Collections.sort(personas, (persona1, persona2) -> Persona.compararPorEdad(persona1, persona2));
-
         // El compilador infiere los argumentos de la funcion en los métodos referenciados.
         Collections.sort(personas, Persona::compararPorEdad);
 
@@ -54,11 +51,9 @@ public class Principal {
         Collections.sort(personas, comparador::compararPorNombre);
 
         log.info("Personas ordenadas por nombre: ");
-        //personas.forEach(p -> System.out.println(p));
         personas.forEach(p -> log.info("{}", p));
         log.info(HEADER);
 
-        //Collections.sort(personas, (per1, per2) -> per1.compararPorEdad2(per2));
         Collections.sort(personas, Persona::compararPorEdad2);
 
         log.info("Personas ordenadas por edad: ");
