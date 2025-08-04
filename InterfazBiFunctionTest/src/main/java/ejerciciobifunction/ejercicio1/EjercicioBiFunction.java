@@ -1,12 +1,15 @@
 package ejerciciobifunction.ejercicio1;
 
-import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class EjercicioBiFunction {
-    public static void main(String[] args) {
-        BiFunction<String, String, String> bi = (x, y) -> x + y;
+    
+	public static void main(String[] args) {
+        BinaryOperator<String> bi = (x, y) -> x + y;
 
-        System.out.println(bi.apply("Hola", "Mundo"));
+        log.info(bi.apply("Hola", "Mundo"));
     }
 }

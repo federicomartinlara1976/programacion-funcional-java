@@ -10,11 +10,7 @@
     	</encoder>
     </appender>
 
-	<logger name="ejercicio1" level="info" additivity="false">
-        <appender-ref ref="CONSOLE"/>
-    </logger>
-    
-    <logger name="ejercicio2" level="info" additivity="false">
+	<logger name="ejerciciobifunction" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 

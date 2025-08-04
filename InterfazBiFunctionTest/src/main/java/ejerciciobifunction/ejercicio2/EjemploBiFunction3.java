@@ -3,6 +3,9 @@ package ejerciciobifunction.ejercicio2;
 import java.util.Arrays;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class EjemploBiFunction3 {
     public static void main(String[] args) {
         List<Empleado> listaEmpleados = Arrays.asList(
@@ -23,8 +26,6 @@ public class EjemploBiFunction3 {
         List<Double> salarios = calculadora.calc((salario, incremento) -> 
             salario + (salario * (incremento / 100)), listaEmpleados, 16.0);
 
-        for (Double salario : salarios) {
-            System.out.println("El salario del empleado es: " + salario);
-        }
+        salarios.forEach(salario -> log.info("El salario del empleado es: {}", salario)); 
     }
 }
