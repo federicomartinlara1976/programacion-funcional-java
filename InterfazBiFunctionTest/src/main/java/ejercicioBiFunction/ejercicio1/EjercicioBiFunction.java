@@ -1,4 +1,4 @@
-package EjercicioBiFunction;
+package ejercicioBiFunction.ejercicio1;
 
 import java.util.function.BiFunction;
 

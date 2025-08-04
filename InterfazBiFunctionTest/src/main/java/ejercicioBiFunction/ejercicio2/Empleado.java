@@ -1,4 +1,4 @@
-package ejercicio2;
+package ejercicioBiFunction.ejercicio2;
 
 public class Empleado {
     private String nombre;
