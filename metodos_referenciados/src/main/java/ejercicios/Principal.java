@@ -1,11 +1,18 @@
 package ejercicios;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import modelos.Persona;
 
+import lombok.extern.slf4j.Slf4j;
+import modelos.Persona;
+import utilerias.ProveedorComparaciones;
+
+@Slf4j
 public class Principal {
-    public static void main(String[] args) {
+    private static final String HEADER = "--------------------------------";
+
+	public static void main(String[] args) {
         List<Persona> personas = Arrays.asList(
             new Persona("Juan", 18, "juanito@hotmail.com"), 
             new Persona("Mario", 17, "mario@hotmail.com"), 
@@ -28,9 +35,9 @@ public class Principal {
             new Persona("Raquel", 16, "raquelita@hotmail.com")
         );
 
-        System.out.println("Personas sin ordenar: ");
-        personas.forEach(p -> System.out.println(p));
-        System.out.println("--------------------------------");
+        log.info("Personas sin ordenar: ");
+        personas.forEach(p -> log.info("{}", p));
+        log.info(HEADER);
 
         //Collections.sort(personas, (persona1, persona2) -> persona1.getEdad().compareTo(persona2.getEdad()));
         //Collections.sort(personas, (persona1, persona2) -> Persona.compararPorEdad(persona1, persona2));
@@ -38,24 +45,24 @@ public class Principal {
         // El compilador infiere los argumentos de la funcion en los métodos referenciados.
         Collections.sort(personas, Persona::compararPorEdad);
 
-        System.out.println("Personas ordenadas por edad: ");
-        personas.forEach(p -> System.out.println(p));
-        System.out.println("--------------------------------");
+        log.info("Personas ordenadas por edad: ");
+        personas.forEach(p -> log.info("{}", p));
+        log.info(HEADER);
 
         ProveedorComparaciones comparador = new ProveedorComparaciones();
 
         Collections.sort(personas, comparador::compararPorNombre);
 
-        System.out.println("Personas ordenadas por nombre: ");
+        log.info("Personas ordenadas por nombre: ");
         //personas.forEach(p -> System.out.println(p));
-        personas.forEach(System.out::println);
-        System.out.println("--------------------------------");
+        personas.forEach(p -> log.info("{}", p));
+        log.info(HEADER);
 
         //Collections.sort(personas, (per1, per2) -> per1.compararPorEdad2(per2));
         Collections.sort(personas, Persona::compararPorEdad2);
 
-        System.out.println("Personas ordenadas por edad: ");
-        personas.forEach(System.out::println);
-        System.out.println("--------------------------------");
+        log.info("Personas ordenadas por edad: ");
+        personas.forEach(p -> log.info("{}", p));
+        log.info(HEADER);
     }
 }

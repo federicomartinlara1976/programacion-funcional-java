@@ -5,7 +5,7 @@ import modelos.Persona;
 public class ProveedorComparaciones {
 
     public int compararPorNombre(Persona per1, Persona persona2) {
-        return per1.getNombre().compareTo(per2.getNombre());
+        return per1.getNombre().compareTo(persona2.getNombre());
     }
 
     public static int compararPorEdad(Persona per1, Persona per2) {
