@@ -12,9 +12,6 @@ public class EjercicioNew {
 	public static void main(String[] args) {
 		List<String> numeros = Arrays.asList("10", "10", "15", "15", "25", "30", "40", "6", "30");
 
-		// List<Integer> resultados = getResults(numeros, (numeroEnString) -> new
-		// Integer(numeroEnString));
-
 		getResults(numeros, Integer::valueOf).forEach(EjercicioNew::multiplicaPor10);
 
 	}
