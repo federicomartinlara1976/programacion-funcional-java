@@ -12,9 +12,8 @@ public class StreamTest {
         Stream<Integer> numStream = numeros.stream();
 
         int suma = numStream
-            .filter(n -> n % 2 == 1) // {1, 3, 5}
-            .map(n -> n * n) // {1, 9, 25}
-            //.reduce(0, (n1, n2) -> n1 + n2);
+            .filter(n -> n % 2 == 1) // Los números impares [1, 3, 5]
+            .map(n -> n * n) // Calcula los cuadrados [1, 9, 25]
             .reduce(0, Integer::sum); // 35
 
         log.info("La suma de los cuadrados de los números impares es: {}", suma);
