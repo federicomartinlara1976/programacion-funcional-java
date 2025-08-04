@@ -1,4 +1,4 @@
-package ejercicioBiFunction.ejercicio1;
+package ejerciciobifunction.ejercicio1;
 
 public class EjercicioBiFunction2 {
     public static void main(String[] args) {
