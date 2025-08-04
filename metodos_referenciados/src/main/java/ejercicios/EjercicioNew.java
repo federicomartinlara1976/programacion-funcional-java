@@ -3,30 +3,32 @@ package ejercicios;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
+import java.util.function.ToIntFunction;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class EjercicioNew {
-    public static void main(String[] args) {
-        List<String> numeros = 
-            Arrays.asList("10", "10", "15", "15", "25", "30", "40", "6", "30");
+	public static void main(String[] args) {
+		List<String> numeros = Arrays.asList("10", "10", "15", "15", "25", "30", "40", "6", "30");
 
-        //List<Integer> resultados = getResults(numeros, (numeroEnString) -> new Integer(numeroEnString));
+		// List<Integer> resultados = getResults(numeros, (numeroEnString) -> new
+		// Integer(numeroEnString));
 
-        getResults(numeros, Integer::new).forEach(EjercicioNew::multiplicaPor10);
+		getResults(numeros, Integer::valueOf).forEach(EjercicioNew::multiplicaPor10);
 
-        
-    }
+	}
 
-    public static List<String> getResults(List<String> datos, Function<String, Integer> func) {
+	public static List<Integer> getResults(List<String> datos, ToIntFunction<String> func) {
 
-        List<Integer> resultados = new ArrayList<>();
+		List<Integer> resultados = new ArrayList<>();
 
-        datos.forEach(strNum -> resultados.add(func.apply(strNum)));
+		datos.forEach(strNum -> resultados.add(func.applyAsInt(strNum)));
 
-        return resultados;
-    }
+		return resultados;
+	}
 
-    public static void multiplicaPor10(int numero) {
-        System.out.println("El nuevo valor del dato " + numero + " es " + (numero * 10));
-    }
+	public static void multiplicaPor10(int numero) {
+		log.info("El nuevo valor del dato {} es {}", numero, (numero * 10));
+	}
 }
