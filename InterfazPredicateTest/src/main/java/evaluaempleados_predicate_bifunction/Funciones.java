@@ -1,3 +1,5 @@
+package evaluaempleados_predicate_bifunction;
+
 import java.util.function.BiFunction;
 
 public class Funciones {

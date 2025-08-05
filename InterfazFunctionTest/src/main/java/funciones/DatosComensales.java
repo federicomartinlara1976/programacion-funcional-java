@@ -1,9 +1,9 @@
 package funciones;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import lombok.extern.slf4j.Slf4j;
 import pojos.Comensal;
@@ -33,12 +33,8 @@ public class DatosComensales {
     }
 
     public static List<Object> getDatosComensales(List<Comensal> listaCom, Function<Comensal, Object> funcion) {
-        List<Object> listaDatos = new ArrayList<>();
-        
-        for (Comensal comensal : listaCom) {
-            listaDatos.add(funcion.apply(comensal));
-        }
-        
-        return listaDatos;
+    	return listaCom.parallelStream()
+                .map(funcion)
+                .toList();
     }
 }

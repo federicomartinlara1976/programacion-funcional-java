@@ -1,4 +1,4 @@
-package evaluaempleados;
+package evaluaempleados_predicate_bifunction;
 
 import java.util.Arrays;
 import java.util.List;

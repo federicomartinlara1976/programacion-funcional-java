@@ -42,6 +42,7 @@
 		<module>InterfazBiFunctionTest</module>
 		<module>InterfazComparatorTest</module>
 		<module>InterfazFunctionTest</module>
+		<module>InterfazPredicateTest</module>
 		<module>intro_streams</module>
 		<module>lambda_con_devolucion</module>
 		<module>lambdas_con_parametros</module>

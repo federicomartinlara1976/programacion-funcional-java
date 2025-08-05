@@ -1,3 +1,5 @@
+package evaluaempleados_predicate_bifunction;
+
 public class Empleado {
     private String nombre;
     private int edad;
