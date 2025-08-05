@@ -5,32 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.1</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<groupId>net.bounceme.chronos</groupId>
+		<artifactId>programacion-funcional-java</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
     <groupId>net.bounceme.chronos</groupId>
     <artifactId>test-lambda-con-devolucion</artifactId>
-    <version>1.0</version>
-
-    <properties>
-    	<java.version>21</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
-    	<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-logging</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>    
     </dependencies>
 
 </project>
