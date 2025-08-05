@@ -34,9 +34,11 @@ public class DatosComensales {
 
     public static List<Object> getDatosComensales(List<Comensal> listaCom, Function<Comensal, Object> funcion) {
         List<Object> listaDatos = new ArrayList<>();
+        
         for (Comensal comensal : listaCom) {
             listaDatos.add(funcion.apply(comensal));
         }
+        
         return listaDatos;
     }
 }

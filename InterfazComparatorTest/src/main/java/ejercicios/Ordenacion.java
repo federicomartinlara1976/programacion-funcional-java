@@ -1,6 +1,11 @@
 package ejercicios;
 
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import modelos.Persona;
 
 public class Ordenacion {
     public static void main(String[] args) {
