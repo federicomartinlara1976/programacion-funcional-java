@@ -13,12 +13,12 @@ public class DatosComensales {
     public static void main(String[] args) {
         List<Comensal> listaComensales =
             Arrays.asList(
-                new Comensal("Javier", 10, 5),
-                new Comensal("Arturo", 10, 5),
-                new Comensal("Mario", 10, 5),
-                new Comensal("Aguila", 10, 5),
-                new Comensal("Lo que sea", 10, 5),
-                new Comensal("Cambio", 10, 5)
+                new Comensal("Javier", 10.0, 5),
+                new Comensal("Arturo", 10.0, 5),
+                new Comensal("Mario", 10.0, 5),
+                new Comensal("Aguila", 10.0, 5),
+                new Comensal("Lo que sea", 10.0, 5),
+                new Comensal("Cambio", 10.0, 5)
             );
 
         List<Object> nombresComensales = getDatosComensales(listaComensales, x -> x.getNombre());

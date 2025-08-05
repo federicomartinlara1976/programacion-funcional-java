@@ -11,8 +11,8 @@ public class Comensal {
     
 	private String nombre;
     
-	private double montoPedido;
+	private Double montoPedido;
     
-	private int mesa;
+	private Integer mesa;
 
 }
