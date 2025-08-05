@@ -26,7 +26,7 @@ public class DatosComensales {
         log.info("La lista de comensales es la siguiente:");
         nombresComensales.forEach(comensal -> log.info("El nombre del comensal es: {}", comensal)); 
 
-        List<Object> montosComensales = getDatosComensales(listaComensales, x -> x.getMonto_pedido());
+        List<Object> montosComensales = getDatosComensales(listaComensales, x -> x.getMontoPedido());
 
         log.info("La lista de montos de comensales es la siguiente:");
         montosComensales.forEach(montoComensal -> log.info("El monto del comensal es: {}", montoComensal)); 
