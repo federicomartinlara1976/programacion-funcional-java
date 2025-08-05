@@ -44,8 +44,8 @@
 		<module>InterfazFunctionTest</module>
 		<module>intro_streams</module>
 		<module>lambda_con_devolucion</module>
-		<module>lambda_con_parametros</module>
-		<module>lambda_sin_parametros</module>
+		<module>lambdas_con_parametros</module>
+		<module>lambdas_sin_parametros</module>
 		<module>metodos_referenciados</module>
 	</modules>
 
