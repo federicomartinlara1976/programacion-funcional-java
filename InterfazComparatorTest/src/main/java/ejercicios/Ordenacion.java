@@ -5,18 +5,21 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 import modelos.Persona;
 
+@Slf4j
 public class Ordenacion {
-    public static void main(String[] args) {
+    
+	public static void main(String[] args) {
         // Ordenación natural de Strings con Comparable.
         List<String> nombres = Arrays.asList("Carlos", "Ana", "Abías", "Germán");
 
-        System.out.println("Lista antes de ordenarse: " + nombres);
+        log.info("Lista antes de ordenarse: {}", nombres);
 
         Collections.sort(nombres);
 
-        System.out.println("Lista después de ordenarse: " + nombres);
+        log.info("Lista después de ordenarse: {}", nombres);
 
         // Ordenacion de personas con Comparable.
         List<Persona> personas = new ArrayList<>();
@@ -25,11 +28,11 @@ public class Ordenacion {
         personas.add(new Persona(3, "Omar"));
         personas.add(new Persona(4, "Juana"));
 
-        System.out.println("Lista de personas antes de ordenarse: " + personas);
+        log.info("Lista de personas antes de ordenarse: {}", personas);
 
         Collections.sort(personas);
 
-        System.out.println("Lista de personas ordenadas por nombre: " + personas);
+        log.info("Lista de personas ordenadas por nombre: {}", personas);
 
         //Collections.sort(personas, new OrdenarPersonaPorId());
 
@@ -42,6 +45,6 @@ public class Ordenacion {
 
         Collections.sort(personas, (p1, p2) -> p1.getIdPersona() - p2.getIdPersona());
 
-        System.out.println("Lista de personas ordenadas por id: " + personas);
+        log.info("Lista de personas ordenadas por id: {}", personas);
     }
 }
