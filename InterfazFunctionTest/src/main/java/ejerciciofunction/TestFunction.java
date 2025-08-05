@@ -11,5 +11,6 @@ public class TestFunction {
         
         log.info("{}", convertidor.apply(3).length());
         log.info("{}", convertidor.apply(30).length());
+        log.info("{}", convertidor.apply(300).length());
     }
 }
