@@ -1,4 +1,4 @@
-package EjercicioFunction;
+package ejerciciofunction;
 
 import java.util.function.Function;
 

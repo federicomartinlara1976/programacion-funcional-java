@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
+import lombok.extern.slf4j.Slf4j;
 import pojos.Comensal;
 
+@Slf4j
 public class DatosComensales {
     public static void main(String[] args) {
         List<Comensal> listaComensales =
@@ -21,17 +23,13 @@ public class DatosComensales {
 
         List<Object> nombresComensales = getDatosComensales(listaComensales, x -> x.getNombre());
 
-        System.out.println("La lista de comensales es la siguiente:");
-        for (Object nombreComensal : nombresComensales) {
-            System.out.println("El nombre del comensal es: " + nombreComensal);
-        }
+        log.info("La lista de comensales es la siguiente:");
+        nombresComensales.forEach(comensal -> log.info("El nombre del comensal es: {}", comensal)); 
 
         List<Object> montosComensales = getDatosComensales(listaComensales, x -> x.getMonto_pedido());
 
-        System.out.println("La lista de montos de comensales es la siguiente:");
-        for (Object montoComensal : montosComensales) {
-            System.out.println("El monto del comensal es: " + montoComensal);
-        }
+        log.info("La lista de montos de comensales es la siguiente:");
+        montosComensales.forEach(montoComensal -> log.info("El monto del comensal es: {}", montoComensal)); 
     }
 
     public static List<Object> getDatosComensales(List<Comensal> listaCom, Function<Comensal, Object> funcion) {
