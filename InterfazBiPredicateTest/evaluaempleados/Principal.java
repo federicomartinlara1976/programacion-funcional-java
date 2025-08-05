@@ -50,12 +50,12 @@ public class Principal {
 
         BiPredicate<Integer, String> criterio = primerCriterio.or(segundoCriterio);
 
-        System.out.println("Empleados de mostrador o ventas mayores de 25 años:");
+        log.info("Empleados de mostrador o ventas mayores de 25 años:");
 
         List<Empleado> listaActualizada = evaluador.evaluar(listaEmpleados, criterio);
 
         for (Empleado empleado : listaActualizada) {
-            System.out.println("Nombre: " + empleado.getNombre() + " - Edad: " + empleado.getEdad() + " - Departamento: " + empleado.getDepartamento());
+            log.info("Nombre: " + empleado.getNombre() + " - Edad: " + empleado.getEdad() + " - Departamento: " + empleado.getDepartamento());
         }
     }
 }

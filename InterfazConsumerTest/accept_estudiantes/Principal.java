@@ -36,10 +36,10 @@ public class Principal {
 
         /** 
         // Consumer que imprime nombre y calificación del estudiante
-        Consumer<Estudiante> cons1 = e -> System.out.println("Nombre: " + e.getNombre() + " - Calificación: " + e.getCalificacion());
+        Consumer<Estudiante> cons1 = e -> log.info("Nombre: " + e.getNombre() + " - Calificación: " + e.getCalificacion());
 
         // Imprime lista original de estudiantes
-        System.out.println("Estudiantes sin calificación actualizada:");
+        log.info("Estudiantes sin calificación actualizada:");
         op.aceptaTodos(estudiantes, cons1);
 
         // Consumer que incrementa la calificación en 15%
@@ -48,13 +48,13 @@ public class Principal {
         // Aplica el incremento a todos los estudiantes
         op.aceptaTodos(estudiantes, cons2);
 
-        System.out.println("Estudiantes con calificación actualizada:");
+        log.info("Estudiantes con calificación actualizada:");
         op.aceptaTodos(estudiantes, cons1);
         */
 
-        Consumer<Estudiante> cons1 = e -> System.out.println("Nombre: " + e.getNombre() + " - Calificación: " + e.getCalificacion());
+        Consumer<Estudiante> cons1 = e -> log.info("Nombre: " + e.getNombre() + " - Calificación: " + e.getCalificacion());
 
-        System.out.println("Estudiantes sin calificación actualizada:");
+        log.info("Estudiantes sin calificación actualizada:");
         op.aceptaTodos(estudiantes, cons1);
 
         Consumer<Estudiante> cons2 = e -> e.setCalificacion(e.getCalificacion() * 1.15);
@@ -63,7 +63,7 @@ public class Principal {
         // Uso de andThen para aplicar el incremento de calificación y luego imprimir el resultado
         Consumer<Estudiante> cons3 = cons2.andThen(cons1);
 
-        System.out.println("Estudiantes con calificación actualizada:");
+        log.info("Estudiantes con calificación actualizada:");
         op.aceptaTodos(estudiantes, cons3);
     }
 }

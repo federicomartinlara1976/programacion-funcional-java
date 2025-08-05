@@ -3,7 +3,9 @@ package evaluaempleados_predicate_bifunction;
 import java.util.Arrays;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class Principal {
     public static void main(String[] args) {
         List<Empleado> listaEmpleados = Arrays.asList(
@@ -27,26 +29,26 @@ public class Principal {
 
         Evaluador evaluador = new Evaluador();
 
-        System.out.println("Empleados con salario mayor a 5000:");
+        log.info("Empleados con salario mayor a 5000:");
         List<Empleado> empleadosSalariosAltos = 
             evaluador.evaluar(listaEmpleados, empleado -> empleado.getSalario() > 5000);
 
         for (Empleado empleado : empleadosSalariosAltos) {
-            System.out.println(empleado.getNombre());
+            log.info(empleado.getNombre());
         }
 
-        System.out.println("Empleados que su nombre inicia con 'J':");
+        log.info("Empleados que su nombre inicia con 'J':");
         List<Empleado> empInicianConJ = evaluador.evaluar(listaEmpleados, empleado -> empleado.getNombre().startsWith("J"));
 
         for (Empleado empleado : empInicianConJ) {
-            System.out.println(empleado.getNombre());
+            log.info(empleado.getNombre());
         }
 
-        System.out.println("\n Empleados jóvenes:");
+        log.info("\nEmpleados jóvenes:");
         List<Empleado> empleadosJovenes = evaluador.evaluar(listaEmpleados, empleado -> empleado.getEdad() < 25);
 
         for (Empleado empleado : empleadosJovenes) {
-            System.out.println(empleado.getNombre());
+            log.info(empleado.getNombre());
         }
 
         Funciones func = new Funciones();
@@ -56,16 +58,16 @@ public class Principal {
             empleado.setSalario(nuevoSalario);
         }
 
-        System.out.println("\n Salarios actualizados en los jóvenes:");
+        log.info("\nSalarios actualizados en los jóvenes:");
         for (Empleado empleado : empleadosJovenes) {
-            System.out.println("Nombre: " + empleado.getNombre() + " - Nuevo salario: " + empleado.getSalario());
+            log.info("Nombre: {} - Nuevo salario: {}" + empleado.getNombre(), empleado.getSalario());
         }
 
-        System.out.println("\n Empleados mayores de 25 años:");
+        log.info("\nEmpleados mayores de 25 años:");
         List<Empleado> empleadosMayores = evaluador.evaluarAlContrario(listaEmpleados, empleado -> empleado.getEdad() < 30);
 
         for (Empleado empleado : empleadosMayores) {
-            System.out.println(empleado.getNombre());
+            log.info(empleado.getNombre());
         }
     }
 }
