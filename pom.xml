@@ -45,6 +45,7 @@
 		<module>InterfazConsumerTest</module>
 		<module>InterfazFunctionTest</module>
 		<module>InterfazPredicateTest</module>
+		<module>InterfazSupplierTest</module>
 		<module>intro_streams</module>
 		<module>lambda_con_devolucion</module>
 		<module>lambdas_con_parametros</module>
