@@ -10,11 +10,11 @@
     	</encoder>
     </appender>
 
-	<logger name="ejerciciofunction" level="info" additivity="false">
+	<logger name="ejercicio" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
     
-    <logger name="funciones" level="info" additivity="false">
+    <logger name="accept_estudiantes" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 
