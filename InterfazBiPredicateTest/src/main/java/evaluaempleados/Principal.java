@@ -2,6 +2,9 @@ package evaluaempleados;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiPredicate;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Se requiere obtener un reporte con todos los empleados que cumplan
@@ -9,6 +12,7 @@ import java.util.List;
  * 1) 25 años en adelante y que estén en el departamento de Ventas o
  * 2) 25 años en adelante y que estén en mostrador.
  */
+@Slf4j
 public class Principal {
     public static void main(String[] args) {
         List<Empleado> listaEmpleados = Arrays.asList(
