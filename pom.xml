@@ -46,6 +46,7 @@
 		<module>InterfazFunctionTest</module>
 		<module>InterfazPredicateTest</module>
 		<module>InterfazSupplierTest</module>
+		<module>InterfazUnaryOperator</module>
 		<module>intro_streams</module>
 		<module>lambda_con_devolucion</module>
 		<module>lambdas_con_parametros</module>
