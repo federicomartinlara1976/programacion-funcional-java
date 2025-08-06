@@ -39,7 +39,7 @@ public class Principal {
 				empleado -> empleado.getNombre().startsWith("J"));
 		empInicianConJ.forEach(empleado -> log.info(empleado.getNombre()));
 
-		log.info("\nEmpleados jóvenes:");
+		log.info("Empleados jóvenes:");
 		List<Empleado> empleadosJovenes = evaluador.evaluar(listaEmpleados, empleado -> empleado.getEdad() < 25);
 		empleadosJovenes.forEach(empleado -> log.info(empleado.getNombre()));
 
@@ -51,11 +51,11 @@ public class Principal {
 			empleado.setSalario(nuevoSalario);
 		}
 
-		log.info("\nSalarios actualizados en los jóvenes:");
+		log.info("Salarios actualizados en los jóvenes:");
 		empleadosJovenes.forEach(
 				empleado -> log.info("Nombre: {} - Nuevo salario: {}", empleado.getNombre(), empleado.getSalario()));
 
-		log.info("\nEmpleados mayores de 25 años:");
+		log.info("Empleados mayores de 25 años:");
 		List<Empleado> empleadosMayores = evaluador.evaluarAlContrario(listaEmpleados,
 				empleado -> empleado.getEdad() > 25);
 		empleadosMayores.forEach(empleado -> log.info(empleado.getNombre()));
