@@ -42,6 +42,7 @@
 		<module>InterfazBiFunctionTest</module>
 		<module>InterfazBiPredicateTest</module>
 		<module>InterfazComparatorTest</module>
+		<module>InterfazConsumerTest</module>
 		<module>InterfazFunctionTest</module>
 		<module>InterfazPredicateTest</module>
 		<module>intro_streams</module>
