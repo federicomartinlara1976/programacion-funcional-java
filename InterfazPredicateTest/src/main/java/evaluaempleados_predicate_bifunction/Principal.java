@@ -46,7 +46,7 @@ public class Principal {
 		Funciones func = new Funciones();
 
 		for (Empleado empleado : empleadosJovenes) {
-			double nuevoSalario = func.incrementoSalario(empleado, 10,
+			Double nuevoSalario = func.incrementoSalario(empleado, 10.0,
 					(salario, incremento) -> salario + (salario * (incremento / 100)));
 			empleado.setSalario(nuevoSalario);
 		}
