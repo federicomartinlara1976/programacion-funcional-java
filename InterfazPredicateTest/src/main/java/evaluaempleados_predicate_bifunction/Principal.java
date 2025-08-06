@@ -7,7 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Principal {
-    public static void main(String[] args) {
+    
+	public static void main(String[] args) {
         List<Empleado> listaEmpleados = Arrays.asList(
             new Empleado("Rodrigo", 25, 1500, "Cobranzas"),
             new Empleado("Alicia", 25, 1500, "Ventas"),
