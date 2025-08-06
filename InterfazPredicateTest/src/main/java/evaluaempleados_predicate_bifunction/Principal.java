@@ -41,7 +41,7 @@ public class Principal {
 
 		log.info("Empleados jóvenes:");
 		List<Empleado> empleadosJovenes = evaluador.evaluar(listaEmpleados, empleado -> empleado.getEdad() < 25);
-		empleadosJovenes.forEach(empleado -> log.info(empleado.getNombre()));
+		empleadosJovenes.forEach(empleado -> log.info("{}: {}", empleado.getNombre(), empleado.getEdad()));
 
 		Funciones func = new Funciones();
 
@@ -58,6 +58,6 @@ public class Principal {
 		log.info("Empleados mayores de 25 años:");
 		List<Empleado> empleadosMayores = evaluador.evaluarAlContrario(listaEmpleados,
 				empleado -> empleado.getEdad() > 25);
-		empleadosMayores.forEach(empleado -> log.info(empleado.getNombre()));
+		empleadosMayores.forEach(empleado -> log.info("{}: {}", empleado.getNombre(), empleado.getEdad()));
 	}
 }
