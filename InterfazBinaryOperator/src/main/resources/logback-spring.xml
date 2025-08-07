@@ -10,14 +10,6 @@
     	</encoder>
     </appender>
 
-	<logger name="ejercicio1" level="info" additivity="false">
-        <appender-ref ref="CONSOLE"/>
-    </logger>
-    
-    <logger name="evaluaempleados" level="info" additivity="false">
-        <appender-ref ref="CONSOLE"/>
-    </logger>
-
     <root level="info">
         <appender-ref ref="CONSOLE"/>
     </root>
