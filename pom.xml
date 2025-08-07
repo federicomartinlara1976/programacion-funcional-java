@@ -18,8 +18,8 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<name>chronos-libs</name>
-	<url>http://maven.apache.org</url>
+	<name>programacion-funcional-java</name>
+	<url>https://github.com/federicomartinlara1976/programacion-funcional-java</url>
 	
 	<dependencies>
 	
