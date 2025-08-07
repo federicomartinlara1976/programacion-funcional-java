@@ -3,6 +3,7 @@ package ejercicios;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
@@ -34,17 +35,20 @@ public class Ordenacion {
 
         log.info("Lista de personas ordenadas por nombre: {}", personas);
 
-        //Collections.sort(personas, new OrdenarPersonaPorId());
-
-        // Collections.sort(personas, new Comparator<Persona>() {
-        //     @Override
-        //     public int compare(Persona o1, Persona o2) {
-        //         return o1.getIdPersona() - o2.getIdPersona();
-        //     }
-        // });
-
+        log.info("Lista de personas ordenadas por id:");
+    
+        Collections.sort(personas, new OrdenarPersonaPorId());
+        log.info("Usando el comparator OrdenarPersonaPorId: {}", personas);
+        
+        Collections.sort(personas, new Comparator<Persona>() {
+             @Override
+             public int compare(Persona o1, Persona o2) {
+                 return o1.getIdPersona() - o2.getIdPersona();
+             }
+        });
+        log.info("Usando el comparator anónimo: {}", personas);
+                
         Collections.sort(personas, (p1, p2) -> p1.getIdPersona() - p2.getIdPersona());
-
-        log.info("Lista de personas ordenadas por id: {}", personas);
+        log.info("Usando el comparator anónimo con lambda: {}", personas);
     }
 }
