@@ -38,6 +38,7 @@
 
 	<modules>
 		<module>creacion_streams</module>
+		<module>ejercicios</module>
 		<module>InterfazBiConsumerTest</module>
 		<module>InterfazBiFunctionTest</module>
 		<module>InterfazBinaryOperator</module>
