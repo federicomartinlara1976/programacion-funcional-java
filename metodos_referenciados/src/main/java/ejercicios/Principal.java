@@ -58,7 +58,11 @@ public class Principal {
         personas.forEach(p -> log.info("{}", p));
         log.info(HEADER);
 
-        // En este caso el método referenciado no está declarado como estático
+        /** 
+         * En este caso el método referenciado no está declarado como estático,
+         * esto es equivalente a (per1, per2) -> per1.compararPorEdad2(per2),
+         * donde per1 es una instancia de la lista personas
+         */
         Collections.sort(personas, Persona::compararPorEdad2);
 
         log.info("Personas ordenadas por edad: ");
