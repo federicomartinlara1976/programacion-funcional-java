@@ -1,9 +1,12 @@
 package operacionesfilter;
 
 import java.util.List;
-import datos.Empleado;
 import java.util.function.Predicate;
 
+import datos.Empleado;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class OperacionesFilter {
     public static void main(String[] args) {
         List<Empleado> empleados = Empleado.empleados();
@@ -24,8 +27,8 @@ public class OperacionesFilter {
         empleados.stream()
             .filter(Empleado::esMujer)
             .forEach(
-                emp -> log.info(emp.getNombre() + " " + emp.getGenero())
-            )
+                emp -> log.info("{} {}", emp.getNombre(), emp.getGenero())
+            );
 
         log.info("Empleados mayores de 25 años: ");
         empleados.stream()
@@ -42,7 +45,7 @@ public class OperacionesFilter {
 
         log.info("Personal masculino que gana más de 500: ");
         empleados.stream()
-            .filter(Empleado::esHombre && emp.getIngresos() > 500)
+            .filter(emp -> emp.esHombre() && emp.getIngresos() > 500)
             .forEach(emp -> log.info(emp.getNombre() + " " + emp.getIngresos()));
 
         log.info("Personal femenino mayor de 25 años con ingresos por encima de los 300: ");
@@ -53,8 +56,7 @@ public class OperacionesFilter {
 
         empleados.stream()
             .filter(fem25300)
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getGenero() + " "
-                + emp.getIngresos()));
+            .forEach(emp -> log.info("{} {} {}", emp.getNombre(), emp.getGenero(), emp.getIngresos()));
 
         log.info("Cantidad total de empleados: " + empleados.stream().filter(fem25300).count());            
     }
