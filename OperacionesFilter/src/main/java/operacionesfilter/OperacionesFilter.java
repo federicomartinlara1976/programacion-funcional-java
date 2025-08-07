@@ -34,7 +34,7 @@ public class OperacionesFilter {
         empleados.stream()
             .filter(emp -> emp.getEdad() > 25)
             .forEach(
-                emp -> log.info(emp.getNombre() + " " + emp.getEdad())
+                emp -> log.info("{} {}", emp.getNombre(), emp.getEdad())
             );
 
         log.info("Empleados masculinos y su nombre empiece con la letra 'a': ");
@@ -46,7 +46,7 @@ public class OperacionesFilter {
         log.info("Personal masculino que gana más de 500: ");
         empleados.stream()
             .filter(emp -> emp.esHombre() && emp.getIngresos() > 500)
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getIngresos()));
+            .forEach(emp -> log.info("{} {}", emp.getNombre(), emp.getIngresos()));
 
         log.info("Personal femenino mayor de 25 años con ingresos por encima de los 300: ");
         Predicate<Empleado> empFemenino = emp -> emp.esMujer();
