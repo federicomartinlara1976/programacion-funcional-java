@@ -54,6 +54,7 @@
 		<module>lambdas_con_parametros</module>
 		<module>lambdas_sin_parametros</module>
 		<module>metodos_referenciados</module>
+		<module>OperacionesFilter</module>
 	</modules>
 
 </project>

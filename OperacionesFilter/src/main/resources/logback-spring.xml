@@ -10,7 +10,7 @@
     	</encoder>
     </appender>
 
-    <logger name="ejercicios" level="info" additivity="false">
+    <logger name="operacionesfilter" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
     
