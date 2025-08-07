@@ -39,7 +39,10 @@ public class Principal {
         personas.forEach(p -> log.info("{}", p));
         log.info(HEADER);
 
-        // El compilador infiere los argumentos de la funcion en los métodos referenciados.
+        /** 
+         * El compilador infiere los argumentos de la funcion en los métodos referenciados.
+         * En este primer caso el método referenciado debe estar declarado como estático
+         */
         Collections.sort(personas, Persona::compararPorEdad);
 
         log.info("Personas ordenadas por edad: ");
@@ -48,12 +51,14 @@ public class Principal {
 
         ProveedorComparaciones comparador = new ProveedorComparaciones();
 
+        // En este caso el método referenciado no está declarado como estático 
         Collections.sort(personas, comparador::compararPorNombre);
 
         log.info("Personas ordenadas por nombre: ");
         personas.forEach(p -> log.info("{}", p));
         log.info(HEADER);
 
+        // En este caso el método referenciado no está declarado como estático
         Collections.sort(personas, Persona::compararPorEdad2);
 
         log.info("Personas ordenadas por edad: ");
