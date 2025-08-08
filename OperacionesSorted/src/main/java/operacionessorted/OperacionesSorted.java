@@ -27,7 +27,7 @@ public class OperacionesSorted {
         log.info("Empleados ordenados por nombre alfabeticamente: ");
         empleados.stream()
             .sorted()
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getGenero()));
+            .forEach(emp -> log.info("{} {}", emp.getNombre(), emp.getGenero()));
 
         log.info("Empleados ordenados por edad: ");
         empleados.stream()
@@ -37,21 +37,21 @@ public class OperacionesSorted {
                     return emp1.getEdad() - emp2.getEdad();
                 }
             })
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getEdad()));
+            .forEach(emp -> log.info("{} {}", emp.getNombre(), emp.getEdad()));
 
         log.info("Empleados ordenados por salario: ");
         empleados.stream()
             .filter(emp -> emp.getEdad() > 25)
             .sorted((emp1, emp2) -> 
                      (int) (emp1.getIngresos() - emp2.getIngresos()))
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getIngresos()));
+            .forEach(emp -> log.info("{} {}", emp.getNombre(), emp.getIngresos()));
 
         log.info("Empleados ordenados por salario de forma descendente: ");
         empleados.stream()
             .filter(emp -> emp.getEdad() > 25)
             .sorted((emp1, emp2) -> 
                      (int) (emp2.getIngresos() - emp1.getIngresos()))
-            .forEach(emp -> log.info(emp.getNombre() + " " + emp.getIngresos()));
+            .forEach(emp -> log.info("{} {}", emp.getNombre(), emp.getIngresos()));
         
     }
 }
