@@ -1,10 +1,12 @@
 package operacionesmap;
 
 import java.util.List;
+
 import datos.Empleado;
+import lombok.extern.slf4j.Slf4j;
 
 
-
+@Slf4j
 public class OperacionesMap {
     public static void main(String[] args) {
         /*IntStream.rangeClosed(1, 5)
@@ -22,8 +24,8 @@ public class OperacionesMap {
         */
         List<Empleado> empleados = Empleado.empleados();
 
-        log.info("Promedio de ingresos de personal femenino mayor de 25 años: " +
-            suma = empleados.stream()
+        log.info("Promedio de ingresos de personal femenino mayor de 25 años: ");
+        double suma = empleados.stream()
                 .filter(emp -> emp.esMujer())
                 .filter(emp -> emp.getEdad() > 25)
                 .mapToDouble(emp -> emp.getIngresos())
