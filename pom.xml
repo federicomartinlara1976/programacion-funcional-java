@@ -57,6 +57,7 @@
 		<module>OperacionesFilter</module>
 		<module>OperacionesMap</module>
 		<module>OperacionesSorted</module>
+		<module>StreamTest</module>
 	</modules>
 
 </project>
