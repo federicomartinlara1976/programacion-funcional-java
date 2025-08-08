@@ -1,8 +1,12 @@
 package operacionessorted;
 
+import java.util.Comparator;
 import java.util.List;
-import datos.Empleado;
 
+import datos.Empleado;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class OperacionesSorted {
     public static void main(String[] args) {
         /*log.info("Nombres ordenados: ");
