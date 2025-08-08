@@ -36,6 +36,6 @@ public class OperacionesMap {
                 .filter(emp -> emp.getEdad() > 25)
                 .count();
 
-        log.info("El promedio es: " + promedio);
+        log.info("El promedio es: {}", promedio);
     }
 }
