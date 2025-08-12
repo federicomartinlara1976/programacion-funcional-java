@@ -39,7 +39,7 @@ public class CrearStream3 {
         estudiantes.add(new Estudiante("Leonardo", 24, 0.0, 0.0));
 
         // Crear un stream de estudiantes
-        log.info("\nStream de estudiantes");
+        log.info("Stream de estudiantes");
         Stream<Estudiante> estudiantesStream = estudiantes.parallelStream();
         estudiantesStream.forEach(estudiante -> log.info("{}", estudiante.getIdentificacion()));
     }
