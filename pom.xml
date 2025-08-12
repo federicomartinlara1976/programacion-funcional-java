@@ -56,6 +56,7 @@
 		<module>metodos_referenciados</module>
 		<module>OperacionesFilter</module>
 		<module>OperacionesMap</module>
+		<module>OperacionesReduccion</module>
 		<module>OperacionesSorted</module>
 		<module>StreamTest</module>
 	</modules>
