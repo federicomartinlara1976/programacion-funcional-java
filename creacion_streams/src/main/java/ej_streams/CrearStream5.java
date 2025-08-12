@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class CrearStream5 {
     
 	public static void main(String[] args) {
-        Path path1 = Paths.get("path_a_tu_archivo.txt");
+        Path path1 = Paths.get("/home/federico/.init/.bash_aliases");
 
         try (Stream<String> lineas = Files.lines(path1)) {
             lineas.forEach(
@@ -25,9 +25,8 @@ public class CrearStream5 {
             log.error("ERROR", e);
         }
 
-        log.info("\n");
         Path dir = Paths.get(".");
-        log.info("\nEl arbol de archivos del proyecto para {} es: \n", dir.toAbsolutePath());
+        log.info("El arbol de archivos del proyecto para {} es:", dir.toAbsolutePath());
 
         try (Stream<Path> paths = Files.walk(dir)) {
             paths.forEach(cadena -> log.info("{}", cadena));
