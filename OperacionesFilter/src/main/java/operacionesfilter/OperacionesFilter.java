@@ -20,7 +20,7 @@ public class OperacionesFilter {
                 }
             })
             .forEach(
-                emp -> log.info(emp.getNombre() + " " + emp.getGenero())
+                emp -> log.info("{} {}", emp.getNombre(), emp.getGenero())
             );
 
         log.info("Empleados que son mujeres: ");
