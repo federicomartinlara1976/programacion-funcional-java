@@ -58,6 +58,6 @@ public class OperacionesFilter {
             .filter(fem25300)
             .forEach(emp -> log.info("{} {} {}", emp.getNombre(), emp.getGenero(), emp.getIngresos()));
 
-        log.info("Cantidad total de empleados: " + empleados.stream().filter(fem25300).count());            
+        log.info("Cantidad total de empleados femeninos mayores que 25 y que cobran > 300: {}", empleados.stream().filter(fem25300).count());            
     }
 }
