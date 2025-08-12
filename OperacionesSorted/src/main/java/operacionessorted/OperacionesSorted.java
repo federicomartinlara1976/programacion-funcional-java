@@ -1,5 +1,6 @@
 package operacionessorted;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,18 +10,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class OperacionesSorted {
     public static void main(String[] args) {
-        /*log.info("Nombres ordenados: ");
+        log.info("Nombres ordenados: ");
         Arrays.asList("Alfredo", "Maria", "Daniel", "Brenda")
             .stream()
             .sorted()
-            .forEach(System.out::println);
+            .forEach(nombre -> log.info(nombre));
 
         log.info("Números ordenados: ");
         Arrays.asList(1, 2, 7, 8, 9, 1, 5, 2, 1, 5, 3, 5)
             .stream()
             .sorted()
-            .forEach(System.out::println);
-        */
+            .forEach(numero -> log.info("{}", numero));
         
         List<Empleado> empleados = Empleado.empleados();
 
