@@ -1,6 +1,7 @@
 package operacionesmap;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 import datos.Empleado;
 import lombok.extern.slf4j.Slf4j;
@@ -25,15 +26,17 @@ public class OperacionesMap {
         List<Empleado> empleados = Empleado.empleados();
 
         log.info("Promedio de ingresos de personal femenino mayor de 25 años: ");
+        Predicate<Empleado> empFemenino = emp -> emp.esMujer();
+        Predicate<Empleado> empMayorDe25 = emp -> emp.getEdad() > 25;
+        Predicate<Empleado> fem25 = empFemenino.and(empMayorDe25);
+        
         double suma = empleados.stream()
-                .filter(emp -> emp.esMujer())
-                .filter(emp -> emp.getEdad() > 25)
+                .filter(fem25)
                 .mapToDouble(emp -> emp.getIngresos())
                 .sum();
 
         double promedio = suma / empleados.stream()
-                .filter(emp -> emp.esMujer())
-                .filter(emp -> emp.getEdad() > 25)
+                .filter(fem25)
                 .count();
 
         log.info("El promedio es: {}", promedio);
