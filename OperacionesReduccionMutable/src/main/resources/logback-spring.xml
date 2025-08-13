@@ -10,7 +10,7 @@
     	</encoder>
     </appender>
 
-    <logger name="operaciones_reduccion" level="info" additivity="false">
+    <logger name="operaciones_reduccion_mutable" level="info" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
     
