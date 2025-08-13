@@ -10,15 +10,21 @@ import lombok.NoArgsConstructor;
 public class Student {
 	
 	private String name;
+	
+	private String surname;
+    
+	private String city;
+    
+	private double avgGrade;
     
 	private int age;
     
-	private double grade;
-    
-	private String subject;
-    
     @Override
     public String toString() {
-        return String.format("%s (%d años, %.1f, %s)", name, age, grade, subject);
+        return "Student{name="  + name + "}";
+    }
+    
+    public Boolean calificacionExcelente() {
+    	return (avgGrade >= 8.0);
     }
 }
