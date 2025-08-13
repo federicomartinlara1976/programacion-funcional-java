@@ -59,6 +59,7 @@
 		<module>OperacionesReduccion</module>
 		<module>OperacionesReduccionMutable</module>
 		<module>OperacionesSorted</module>
+		<module>OtionalTest</module>
 		<module>StreamTest</module>
 	</modules>
 
