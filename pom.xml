@@ -50,6 +50,7 @@
 		<module>InterfazSupplierTest</module>
 		<module>InterfazUnaryOperator</module>
 		<module>intro_streams</module>
+		<module>java_optional_exercise</module>
 		<module>lambda_con_devolucion</module>
 		<module>lambdas_con_parametros</module>
 		<module>lambdas_sin_parametros</module>
