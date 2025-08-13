@@ -2,10 +2,11 @@ package services;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import models.Employee;
 
-public abstract class EmployeeService {
+public class EmployeeService {
 
 	public static List<Employee> getEmployeesFromDB() {
 		return Arrays.asList(
@@ -20,7 +21,21 @@ public abstract class EmployeeService {
 		);
 	}
 	
-	abstract void findEmployeeByEmail();
+	public Optional<Employee> findEmployeeByEmail(String email) {
+		return getEmployeesFromDB()
+			.stream()
+			.filter(employee -> employee.getEmail().equals(email))
+			.findFirst();
+		
+//		List<Employee> employees = getEmployeesFromDB()
+//			.stream()
+//			.filter(employee -> employee.getEmail().equals(email))
+//			.collect(Collectors.toList());
+//		
+//		Employee employee = employees.get(0);
+//		
+//		return (employee != null) ? Optional.of(employee) : Optional.empty();
+	}
 
-	abstract Employee defaultEmployee();
+	//abstract Employee defaultEmployee();
 }

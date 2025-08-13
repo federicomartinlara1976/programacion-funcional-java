@@ -1,15 +1,19 @@
 package controllers;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 import lombok.extern.slf4j.Slf4j;
 import models.Employee;
+import services.EmployeeService;
 
 @Slf4j
 public class EmployeeController {
 
 	public Employee findEmployeeByEmail(String email) {
-		return null;
+		Optional<Employee> oEmployee = new EmployeeService().findEmployeeByEmail(email);
+		
+		return oEmployee.isPresent() ? oEmployee.get() : null;
 	}
 	
 	public static void main(String[] args) {
@@ -21,6 +25,8 @@ public class EmployeeController {
 		
 		String email = scanner.next();
 		
-		controller.findEmployeeByEmail(email);
+		Employee employee = controller.findEmployeeByEmail(email);
+		
+		log.info("{}", employee);
 	}
 }
