@@ -37,5 +37,7 @@ public class EmployeeService {
 //		return (employee != null) ? Optional.of(employee) : Optional.empty();
 	}
 
-	//abstract Employee defaultEmployee();
+	public static Employee defaultEmployee() {
+		return new Employee("default@email.com", "Default", "Default", "Dirección conocida", "Programadora");
+	}
 }
