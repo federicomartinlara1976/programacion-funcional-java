@@ -28,7 +28,7 @@ public class EmployeeController {
 		// Se imprime el empleado encontrado, en caso contrario no hace nada
 		oEmployee.ifPresent(employee -> log.info("{}", employee));
 
-		// Se iomprime el empleado encontrado, en caso contrario imprime el mensaje que no se encontró
+		// Se imprime el empleado encontrado, en caso contrario imprime el mensaje que no se encontró
 		oEmployee.ifPresentOrElse(
 				employee -> log.info("{}", employee), 
 				() -> log.info("No se encontró el empleado"));
