@@ -57,6 +57,7 @@
 		<module>OperacionesFilter</module>
 		<module>OperacionesMap</module>
 		<module>OperacionesReduccion</module>
+		<module>OperacionesReduccionMutable</module>
 		<module>OperacionesSorted</module>
 		<module>StreamTest</module>
 	</modules>
