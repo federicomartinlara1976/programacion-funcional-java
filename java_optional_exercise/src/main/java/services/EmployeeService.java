@@ -10,8 +10,8 @@ public class EmployeeService {
 
 	public static List<Employee> getEmployeesFromDB() {
 		return Arrays.asList(
-			new Employee("romina@email.com", "Romina", "Martínez", "Dirección conocida", "Programadora"),
-			new Employee("claudia@email.com", "Claudia", "Iturri", "Dirección conocida", "Programadora"),
+			new Employee("romina@email.com", "Romina", "Martínez", "Dirección conocida", "Programador"),
+			new Employee("claudia@email.com", "Claudia", "Iturri", "Dirección conocida", "Programador"),
 			new Employee("javier@email.com", "Javier", "Vázquez", "Dirección conocida", "Programador"),
 			new Employee("itzel@email.com", "Itzel", "Ceballos", "Dirección conocida", "Infraestructura"),
 			new Employee("alonso@email.com", "Alonso", "Zamora", "Dirección conocida", "Product Manager"),
