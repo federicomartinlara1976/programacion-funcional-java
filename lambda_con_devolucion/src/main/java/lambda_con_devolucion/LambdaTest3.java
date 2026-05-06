@@ -13,7 +13,8 @@ public class LambdaTest3 {
     }
 
     private static void engine(Calculadora calc) {
-        int x = 2, y = 4;
+        int x = 2;
+        int y = 4;
         int resultado = calc.calcular(x, y);
         log.info("El resultado de la operacion es: {}", resultado);
     }
