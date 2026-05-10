@@ -1,7 +1,10 @@
 package ejercicio2;
 
+import java.util.List;
 import java.util.function.IntFunction;
 import java.util.function.IntPredicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,7 +30,18 @@ public class TestCollatz {
         	
         	sb.append(String.format("-> %d ", numero));
         }
-        
         log.info("{}", sb.toString());
+        
+        log.info("Con programación funcional");
+        numero = 7;
+        List<Integer> secuencia = Stream.iterate(numero, n -> n != 1, 
+                n -> n % 2 == 0 ? n / 2 : n * 3 + 1)
+        		.toList();
+        
+        String resultado = secuencia.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining(" -> "));
+        
+        log.info("{}", resultado);
     }
 }
