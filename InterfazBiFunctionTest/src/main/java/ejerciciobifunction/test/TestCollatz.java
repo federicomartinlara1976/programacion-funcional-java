@@ -1,4 +1,4 @@
-package ejercicio2;
+package ejerciciobifunction.test;
 
 import java.util.List;
 import java.util.function.IntFunction;
