@@ -20,14 +20,7 @@ public class TestCollatz {
         StringBuilder sb = new StringBuilder(String.format("%d ", numero));
         
         while (numero != 1) {
-        	
-        	if (predicate.test(numero)) {
-        		numero = fPar.apply(numero);
-        	}
-        	else {
-        		numero = fImpar.apply(numero);
-        	}
-        	
+        	numero = predicate.test(numero) ? fPar.apply(numero) : fImpar.apply(numero);
         	sb.append(String.format("-> %d ", numero));
         }
         log.info("{}", sb.toString());
