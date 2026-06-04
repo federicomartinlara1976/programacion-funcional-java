@@ -20,14 +20,14 @@ public class TestNewtonRaphson {
         Double solucion = null;
         Integer ni = 0;
         
-        Double[] x1 = new Double[100];
-        x1[0] = puntoInicial;
+        Double[] x = new Double[100];
+        x[0] = puntoInicial;
         
         for (int i = 1; i <= ITERACIONES && Objects.isNull(solucion); i++) {
-        	x1[i] = x1[i-1] - (f.apply(x1[i-1])/df.apply(x1[i-1]));
+        	x[i] = x[i-1] - (f.apply(x[i-1])/df.apply(x[i-1]));
         	
-        	if (Math.abs(x1[i] - x1[i-1]) < TOLERANCIA) {
-        		solucion = x1[i];
+        	if (Math.abs(x[i] - x[i-1]) < TOLERANCIA) {
+        		solucion = x[i];
         	}
         	
         	ni = i;
