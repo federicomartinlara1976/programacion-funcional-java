@@ -23,7 +23,7 @@ public class TestCollatz {
         	numero = predicate.test(numero) ? fPar.apply(numero) : fImpar.apply(numero);
         	sb.append(String.format("-> %d ", numero));
         }
-        log.info("{}", sb.toString());
+        log.info("{}", sb);
         
         log.info("Con programación funcional");
         numero = 7;
