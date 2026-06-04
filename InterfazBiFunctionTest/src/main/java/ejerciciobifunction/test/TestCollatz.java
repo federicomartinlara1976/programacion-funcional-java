@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class TestCollatz {
-
+	
 	public static void main(String[] args) {
 		IntFunction<Integer> fPar = n -> n / 2;
 		IntFunction<Integer> fImpar = n -> n * 3 + 1;
