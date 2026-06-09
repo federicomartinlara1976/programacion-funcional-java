@@ -1,5 +1,7 @@
 package ejerciciobifunction.test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.DoubleFunction;
 
@@ -20,14 +22,14 @@ public class TestNewtonRaphson {
         Double solucion = null;
         Integer ni = 0;
         
-        Double[] x = new Double[100];
-        x[0] = puntoInicial;
+        List<Double> x = new ArrayList<>();
+        x.add(puntoInicial);
         
         for (int i = 1; i <= ITERACIONES && Objects.isNull(solucion); i++) {
-        	x[i] = x[i-1] - (f.apply(x[i-1])/df.apply(x[i-1]));
+        	x.add(x.get(i-1) - (f.apply(x.get(i-1))/df.apply(x.get(i-1))));
         	
-        	if (Math.abs(x[i] - x[i-1]) < TOLERANCIA) {
-        		solucion = x[i];
+        	if (Math.abs(x.get(i) - x.get(i-1)) < TOLERANCIA) {
+        		solucion = x.get(i);
         	}
         	
         	ni = i;
