@@ -1,9 +1,14 @@
 package ejerciciobifunction.test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.DoubleFunction;
+
+import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,7 +19,8 @@ public class TestNewtonRaphson {
 	
 	private static final Double TOLERANCIA = 0.0000000000001;
 
-	public static void main(String[] args) {
+	@Test
+	void test() {
 		DoubleFunction<Double> f = x -> Math.pow(x, 3) - 5*Math.pow(x, 2) + 7*x - 3;
 		DoubleFunction<Double> df = x -> 3*Math.pow(x, 2) - 10*x + 7;
 		
@@ -37,9 +43,11 @@ public class TestNewtonRaphson {
         
         if (ni == ITERACIONES) {
         	log.error("Convergencia no lograda tras {} iteraciones", ni);
+        	assertNull(solucion);
         }
         else {
         	log.info("Solución: {}, iteraciones: {}", solucion, ni);
+        	assertNotNull(solucion);
         }
     }
 }
