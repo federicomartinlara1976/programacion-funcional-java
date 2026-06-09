@@ -8,9 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TestNewtonRaphson {
 
-	private static final Integer ITERACIONES = 10;
+	private static final Integer ITERACIONES = 100;
 	
-	private static final Double TOLERANCIA = 0.0001;
+	private static final Double TOLERANCIA = 0.0000000000001;
 
 	public static void main(String[] args) {
 		DoubleFunction<Double> f = x -> Math.pow(x, 3) - 5*Math.pow(x, 2) + 7*x - 3;
@@ -37,7 +37,7 @@ public class TestNewtonRaphson {
         	log.error("Convergencia no lograda tras {} iteraciones", ni);
         }
         else {
-        	log.info("Solución: {}", solucion);
+        	log.info("Solución: {}, iteraciones: {}", solucion, ni);
         }
     }
 }
