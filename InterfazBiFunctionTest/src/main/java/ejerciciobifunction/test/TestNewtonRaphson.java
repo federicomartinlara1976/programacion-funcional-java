@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.DoubleFunction;
+import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 
@@ -47,6 +48,9 @@ public class TestNewtonRaphson {
         }
         else {
         	log.info("Solución: {}, iteraciones: {}", solucion, ni);
+        	IntStream.range(0, x.size())
+        		.forEach(i -> log.info("Índice {}: Valor: {}", i, x.get(i)));
+        	
         	assertNotNull(solucion);
         }
     }
